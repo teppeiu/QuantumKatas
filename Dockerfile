@@ -12,8 +12,8 @@ COPY . ${HOME}
 USER root
 
 # Install Python dependencies for the Python visualization and tutorial notebooks
-RUN pip install "matplotlib"
-RUN pip install "pytest"
+RUN sudo -H pip install "matplotlib"
+RUN sudo -H pip install "pytest"
 
 RUN chown -R ${USER} ${HOME} && \
     chmod +x ${HOME}/scripts/*.sh
